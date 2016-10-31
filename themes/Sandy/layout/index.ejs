@@ -1,18 +1,132 @@
-<%
-var prev = __('prev');
-var next = __('next');
-%>
-
 <div id="main">
-<% page.posts.each(function(item){ %>
-  <%- partial('_partial/article', {item: item, index: true,desc: true}) %>
-<% }); %>
-<% if (page.total > 1){ %>
-  <nav id="page-nav" class="clearfix">
-    <%- paginator({
-      prev_text: '&laquo; '+prev,
-      next_text: next+' &raquo;'
-    }) %>
-  </nav>
-<% } %>
+
+
+
+
+
+<section class="sandy-top">
+	
+		<div class="sandy-slogan wow fadeInUp data-wow-duration="2s" data-wow-delay="0.6s" ">
+			<h2>SANDY ZHANG</h2>
+			<h4>An Awesome Designer & A Friendly Developer</h4>
+			
+		</div>
+		<div class="sandy-top-btn wow flipInX data-wow-duration="2s" data-wow-delay="1.2s"" ><a href="#" class="sandy-btn-red">Be My Friend</a></div>
+		<div class="sandy-friend-top clearfix">
+			<ul class="navbar-nav nav">
+				<li><a href="https://www.facebook.com/zhang.huiqiao" class="sandy-icon-facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="https://www.linkedin.com/profile/view?id=235610684&trk=nav_responsive_tab_profile_pic" target="_blank" class="sandy-icon-linkedin"><i class="fa fa-linkedin"></i></a></li>
+				<li><a href="https://dribbble.com/sandyzhang" class="sandy-icon-dribbble" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+				<li><a href="#" class="sandy-icon-weixin" id="weixin" target="_blank"><i class="fa fa-weixin"></i></a></li>
+			</ul>
+		</div>
+</section>
+
+// <section class="sandy-second">
+// 	<div class="container">
+// 		<div class="sandy-second-portrait wow bounceIn"><img src="<?php echo bloginfo('template_url'); ?>/images/portrait.jpg" alt="" width="150px" height-"150px"></div>
+// 		<div class="sandy-second-intro wow fadeInUp">
+// 			<h4>Hi, This is Sandy.<br/><br/>
+// 				An interaction designer lived in Beijing, got a master degree of BUPT at 2015, currently working at Alibaba Group. <br/>
+// 				I'm working to understand user's needs, use professional skills,ideas and software to make sophisticated user case more simple, have lots of skill in user interface design and usability.<br/><br/>
+// 				Fortunate to have designing experience in many different fields such as Internet, Automobile, Game, Service, Finance, Medical Treatment, Education. Design is not only solve problems, but also make people comfortable, happy and peace.<br/><br/>
+// 				I love designing, developing and life.</h4>
+// 		</div>
+// 	</div>
+// </section>
+
+// <section class="sandy-timeline">
+// 	<div class="container">
+// 		<h2>WORK TIMELINE</h2>
+// 		<div class="timeline">
+// 			<div class="right wow slideInLeft"><h6>START</h6><h4>&nbsp;</h4></div>
+// 			<div class="left  wow slideInRight"><h6>Jun,2011-Sep.2011</h6><h4>SINA WEIBO</h4></div>
+// 			<div class="right wow slideInLeft"><h6>Oct,2011-July,2012</h6><h4>IBM</h4></div>
+// 			<div class="left wow slideInRight"><h6>&nbsp;</h6><h4>&nbsp;</h4></div>
+// 			<div class="right wow slideInLeft"><h6>&nbsp;</h6><h4>&nbsp;</h4></div>
+// 			<div class="left wow slideInRight"><h6>Feb,2013-June,2013</h6><h4>BMW</h4></div>
+// 			<div class="right wow slideInLeft"><h6>Oct,2013-May,2014</h6><h4>APP ANNIE</h4></div>
+// 			<div class="left wow slideInRight"><h6>&nbsp;</h6><h4>&nbsp;</h4></div>
+// 			<div class="right wow slideInLeft"><h6>&nbsp;</h6><h4>&nbsp;</h4></div>
+// 			<div class="left wow slideInRight"><h6>Jun,2014-Oct,2014</h6><h4>NETEASE GAME</h4></div>
+// 			<div class="right wow slideInLeft"><h6>Sep,2014-Now</h6><h4>ALIBABA</h4></div>
+// 			<div class="left wow slideInRight"><h6>TO BE CONTINUE</h6><h4>&nbsp;</h4></div>
+// 		</div>
+// 		<div class="sandy-timeline-btn wow flipInX "><a href="<?php echo bloginfo('template_url'); ?>/resume.pdf" target="_blank" class="sandy-btn-tran">View My Resume</a></div>
+// 	</div>
+// </section>
+
+// <section class="sandy-portofolio">
+// 	<div class="container">
+// 		<?php 
+
+// 			query_posts( 'cat=1&posts_per_page=6' ); 
+
+// 		?>
+// 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		
+//     					<div>
+//     						<a href="<?php the_permalink(); ?>"><?php sandy_post_thumbnail(); ?></a>
+
+// 			</div>	
+// 		<?php endwhile; ?>
+// 		<?php endif; ?>
+// 	</div>
+// 	<div class="sandy-portfolio-btn"><a href="/?cat=1" class="sandy-btn-word">View More&gt;&gt;</a></div>
+// </section>
+
+// <section class="sandy-skill">
+// 	<div class="container">
+// 		<h2>SKILL</h2>
+// 		<div class="sandy-skill-design">
+// 			<h3></h3>
+// 			<p>design</p>
+// 			<ul>
+// 				<a  class="wow bounceInLeft center"><li style="background-position:0px 0px"></li></a>
+// 				<a  class="wow bounceInLeft center"><li style="background-position:-115px 0px"></li></a>
+// 				<a  class="wow bounceInLeft center"><li style="background-position:-230px 0"></li></a>
+// 				<a  class="wow center"><li style="background-position:-345px 0"></li></a>
+// 				<a  class="wow bounceInRight center"><li style="background-position:-460px 0"></li></a>
+// 				<a  class="wow bounceInRight center"><li style="background-position:-575px 0"></li></a>
+// 				<a  class="wow bounceInRight center"><li style="background-position:-690px 0"></li></a>
+// 			</ul>
+// 		</div>
+// 		<div class="sandy-skill-tech">
+// 			<h3></h3>
+// 			<p>technology</p>
+// 			<div class="tech">
+// 				<div class="tech-big">HTML5</div>
+// 				<div class="tech-big">
+// 					<div class="tech-small">CSS3</div>
+// 					<div class="tech-small">Javascript</div>
+// 				</div>
+// 				<div class="tech-big">
+// 					<div class="tech-small">Bootstrap</div>
+// 					<div class="tech-small">jQuery</div>
+// 				</div>
+// 				<div class="tech-big">
+// 					<div class="tech-small">wordpress</div>
+// 					<div class="tech-small">PHP</div>
+// 				</div>
+// 				<div class="tech-big">
+// 					<div class="tech-small">Arduino</div>
+// 					<div class="tech-small">Node.js</div>
+// 				</div>
+// 				<div class="tech-big">
+// 					<div class="tech-small">Arduino</div>
+// 					<div class="tech-small">Node.js</div>
+// 				</div>
+// 			</div>
+// 			<div class="sandy-portfolio-btn"><a target="_blank" href="<?php echo bloginfo('template_url'); ?>/SandyEffects/effect.php" class="sandy-btn-word">Sandy Effects&gt;&gt;</a></div>
+// 		</div>
+// 	</div>
+// </section>
+
+// <section class="sandy-contact-btn">
+// 	<div class="container">
+// 		<h1>Donnot Hesitate</h1>
+// 		<a href="/?page_id=2" class="sandy-btn-red  wow pulse animated"  data-wow-delay="300ms" data-wow-iteration="infinite" data-wow-duration="2s" style="visibility: visible; -webkit-animation-duration: 2s; -webkit-animation-delay: 300ms; -webkit-animation-iteration-count: infinite;">Contact me</a>
+// 	</div>
+// </section>
+
 </div>
